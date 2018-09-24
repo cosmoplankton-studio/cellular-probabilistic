@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91b42b90-647e-40b6-b617-1bccdd8c5581}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|.venv|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="dataservices\data_debug_tfrecords.py" />
+    <Compile Include="dataservices\data_hdf5.py" />
+    <Compile Include="dataservices\data_pipeline_base.py" />
+    <Compile Include="dataservices\data_provider.py" />
+    <Compile Include="dataservices\data_service_base.py" />
+    <Compile Include="dataservices\__init__.py" />
+    <Compile Include="exports\import_test_archive.py" />
+    <Compile Include="models\model_aaegan_base.py" />
+    <Compile Include="models\model_aaegan_v_00_01.py" />
+    <Compile Include="models\model_aaegan_v_lite.py" />
+    <Compile Include="models\model_defines.py" />
+    <Compile Include="models\model_factory.py" />
+    <Compile Include="models\__init__.py" />
+    <Compile Include="networks\network_aae_base.py" />
+    <Compile Include="networks\network_aae_v_00_01.py" />
+    <Compile Include="networks\network_aae_v_lite.py" />
+    <Compile Include="networks\__init__.py" />
+    <Compile Include="trainers\run_trainer_async.py" />
+    <Compile Include="utils\global_logging.py" />
+    <Compile Include="utils\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="images\cellular-probabilistic.gif" />
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dataservices" />
+    <Folder Include="exports" />
+    <Folder Include="images" />
+    <Folder Include="models" />
+    <Folder Include="networks" />
+    <Folder Include="trainers" />
+    <Folder Include="utils" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|VisualStudio|Python 3.6.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include=".venv\">
+      <Id>.venv</Id>
+      <Version>3.6</Version>
+      <Description>.venv (Python 3.6.6)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

@@ -1,0 +1,8 @@
+# local
+/TF_WORK_DIR
+**__pycache__
+
+# misc
+.DS_Store
+.vs
+.venv
